@@ -41,11 +41,7 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'assets/[name].js',
     assetModuleFilename: (pathData) => {
-      const filepath = path
-        .dirname(pathData.filename)
-        .split('/')
-        .slice(1)
-        .join('/');
+      const filepath = path.dirname(pathData.filename).split('/').slice(1).join('/');
       return `${filepath}/[name][ext][query]`;
     },
   },
@@ -92,7 +88,7 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.(png|jpe?g|svg|gif|ico)$/,
+        test: /\.(png|jpe?g|svg|gif|ico|mp4|webm)$/,
         type: 'asset/resource',
       },
       {
@@ -133,11 +129,6 @@ module.exports = {
         use: [
           {
             loader: 'svg-sprite-loader',
-            options: {
-              extract: true,
-              spriteFilename: 'sprite.svg',
-              runtimeCompat: true,
-            },
           },
         ],
       },

@@ -1,2 +1,47 @@
 @use '../utils/vars' as *;
 @use '../utils/mixins' as *;
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.header {
+  position: absolute;
+  z-index: 1010;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  border-bottom: 1px solid var(--divider-color);
+
+  &__logo {
+    margin-right: 40px;
+  }
+
+  &__nav {
+    margin-right: auto;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 20px;
+  }
+
+  &__working-time {
+    margin-top: 6px;
+  }
+
+  &__phone {
+    font-weight: 600;
+    color: var(--primary-text);
+    text-decoration: none;
+  }
+}

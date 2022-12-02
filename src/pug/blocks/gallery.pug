@@ -1,0 +1,9 @@
+section.section.container
+  - locals.sectionTitle = 'Masonry Gallery';
+  - locals.sectionDesc = null;
+  include ./section-heading
+  .gallery-grid
+    each val in [1,2,3,4,5,6]
+      a.gallery-grid__item(data-fancybox='gallery', href=require(`@/images/gallery/${val}.jpg`))
+        picture.gallery-grid__image
+          img(src=require(`@/images/gallery/${val}.jpg`), alt='')

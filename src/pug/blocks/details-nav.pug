@@ -1,0 +1,18 @@
+section.section.container
+  - locals.sectionTitle = 'Lassen Sie Sich Von Unserer Mentalität, Lebensfreude Und Gastfreundschaft Mitreisse';
+  - locals.sectionDesc = 'Neben den frisch zubereiteten Tapas und unserem vielfältigen Weinsortiment, ist unsere nach hauseigenem Rezept hergestellte Sangria eine unserer Spezialitäten.';
+  include ./section-heading
+  .details-wrapper.swiper
+    nav.details.swiper-wrapper
+      a.details__item.swiper-slide(href='#', style=`background-image:url(${require('@/images/d1.jpg')})`)
+        .details__content
+          h3.details__title Headline is Screaming
+          p.details__desc Menu
+      a.details__item.swiper-slide(href='#', style=`background-image:url(${require('@/images/d2.jpg')})`)
+        .details__content
+          h3.details__title Headline is Screaming
+          p.details__desc Menu
+      a.details__item.swiper-slide(href='#', style=`background-image:url(${require('@/images/d3.jpg')})`)
+        .details__content
+          h3.details__title Headline is Screaming
+          p.details__desc Menu

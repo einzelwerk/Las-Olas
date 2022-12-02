@@ -1,0 +1,20 @@
+include ../modules/vars
+
+header.header
+  .header-inner.container
+    .header__logo.logo
+      a.logo__link(href='')
+        img.logo__src(src=require('@/images/Logo.svg'), alt='')
+    nav.header__nav.nav
+      ul.nav-list
+        each val in menu
+          li.nav__item
+            a.nav__link(href=val.link)= val.name
+    .header__info
+      a.header__phone(href='tel:9999') +49 (0) 2324 686 66 70
+      .header__working-time.working-time
+        span.working-time__text 17:00 – 22:30 Uhr
+        .working-time__toolbox
+          svg.working-time__icon(width='14', height='14')
+            use(xlink:href='sprite.svg#info_sprite')
+    button.header__btn.btn.btn--secondary.js-open-modal Tisch reservieren

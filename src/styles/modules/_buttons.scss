@@ -1,1 +1,30 @@
 @use '../utils/mixins' as *;
+
+button {
+  all: unset;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+
+  &--primary {
+    padding: 16px 40px;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    background: var(--main-gradient);
+    border-radius: 8px;
+  }
+
+  &--secondary {
+    padding: 12px 24px;
+    font-weight: 600;
+    border: 1px solid var(--divider-color);
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,41 @@
+.hero-section {
+  position: relative;
+
+  height: 100vh;
+  min-height: 500px;
+  max-height: 1080px;
+  margin-bottom: 40px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  padding-top: var(--header-height);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    margin: 0;
+    font-size: 72px;
+    font-weight: 500;
+  }
+
+  &__desc {
+    max-width: 480px;
+    margin: 20px 0 0;
+
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+  }
+
+  &__btn {
+    margin-top: 40px;
+  }
+}

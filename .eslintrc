@@ -5,5 +5,8 @@
   },
   "parser": "@babel/eslint-parser",
   "extends": ["eslint-config-airbnb-base", "prettier"],
-  "plugins": ["prettier"]
+  "plugins": ["prettier"],
+  "settings": {
+    "singleQuote": true
+  }
 }

@@ -1,0 +1,30 @@
+.nav-list {
+  all: unset;
+  display: flex;
+}
+
+.nav {
+  &__item {
+    all: unset;
+
+    margin-right: 30px;
+
+    font-weight: 500;
+    color: var(--secondary-text);
+
+    transition: color 0.5s;
+
+    &:hover {
+      color: var(--primary-text);
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    all: unset;
+    cursor: pointer;
+  }
+}

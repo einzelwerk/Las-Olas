@@ -1,0 +1,26 @@
+footer.footer
+  .footer-wrapper.container
+    .footer-top
+      .footer__logo.logo
+        a.logo__link(href='')
+          img.logo__src(src=require('@/images/logo.svg'), alt='')
+      .footer__col
+        h5.footer__title Main menu
+        nav.footer-nav
+          ul.footer-nav-list
+            li.footer-nav__item
+              a.footer-nav__link(href='') Home
+            li.footer-nav__item
+              a.footer-nav__link(href='') Location
+            li.footer-nav__item
+              a.footer-nav__link(href='') Speisekarte
+            li.footer-nav__item
+              a.footer-nav__link(href='') Catering
+            li.footer-nav__item
+              a.footer-nav__link(href='') Kontakt
+      .footer__col
+        h5.footer__title Kontakt
+        .footer-contacts
+          .footer-contacts__item
+            svg(width='16', height='16')
+              use(xlink:href='sprite.svg#map_sprite')

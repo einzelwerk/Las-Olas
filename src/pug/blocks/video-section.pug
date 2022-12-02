@@ -1,0 +1,10 @@
+section.section.container
+  - locals.sectionTitle = 'Video Section';
+  - locals.sectionDesc = 'Mit der Anmeldung zum Newsletter erkläre ich mich mit der Verarbeitung meiner personenbezogenen Daten entsprechend der Datenschutzerklärung';
+  include ./section-heading
+  .video.js-play-video
+    button.video__play.play
+      span.play__text Zum Imagevideo
+      svg.play__icon(width='24', height='24')
+        use(xlink:href='sprite.svg#play_sprite') 
+    video.video__src(muted, src=require('@/media/video.mp4')) 

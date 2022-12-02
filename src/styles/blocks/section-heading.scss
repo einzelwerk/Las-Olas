@@ -1,0 +1,23 @@
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 60px;
+
+  &__title {
+    max-width: 640px;
+    margin: 0;
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  &__desc {
+    max-width: 495px;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 140%;
+
+    opacity: 0.8;
+  }
+}
