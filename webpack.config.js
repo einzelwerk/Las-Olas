@@ -52,7 +52,7 @@ module.exports = {
         template: path.resolve(__dirname, pagesDir, file),
         filename: `${path.parse(file).name}.html`,
         minify: false,
-        path: isProd ? '/Las-olas' : '',
+        path: isProd ? '/Las-Olas' : '',
       });
     }),
     new ESLintPlugin(),
