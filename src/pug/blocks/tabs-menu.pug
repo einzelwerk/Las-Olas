@@ -1,0 +1,72 @@
+section.section.container
+  .tabs-menu-wrapper
+    .tabs-category.automatic(role='tablist')
+      button.tabs-category__button.btn.btn--secondary(type='button', role='tab', aria-selected='true', aria-controls='tabpanel-1') Tapas
+      button.tabs-category__button.btn.btn--secondary(type='button', role='tab', aria-selected='false', aria-controls='tabpanel-2', tabindex='-1') Suppen / Salate
+      button.tabs-category__button.btn.btn--secondary(type='button', role='tab', aria-selected='false', aria-controls='tabpanel-3', tabindex='-1') Hauptspeisen
+      button.tabs-category__button.btn.btn--secondary(type='button', role='tab', aria-selected='false', aria-controls='tabpanel-4', tabindex='-1') Menü
+    #tabpanel-1.tabs-panel(role='tabpanel', tabindex='0', aria-labelledby='tab-1')
+      .tabs-content
+        h2.tabs-content__title Tapas
+        .tabs-content__grid.tabs-grid
+          each val in [1,1,1,1,1,1,1,1,1,1,1,1]
+            .tabs-grid__item
+              h3.tabs-grid__title Gegrillte Spitzpaprika, gefüllt mit Weichkäse
+              p.tabs-grid__desc Jamón «Serrano» (15 Monate gereift)
+              span.tabs-grid__price 4,90 €
+        button.tabs-content__btn.btn.btn--secondary Mehr laden
+    #tabpanel-2.tabs-panel.is-hidden(role='tabpanel', tabindex='0', aria-labelledby='tab-2')
+      .tabs-content
+        h2.tabs-content__title Salate
+        .tabs-content__grid.tabs-grid
+          each val in [1,1,1,1,1,1,1,1,1,1,1,1]
+            .tabs-grid__item
+              h3.tabs-grid__title Gegrillte
+              p.tabs-grid__desc Jamón «Serrano»
+              span.tabs-grid__price 4,90 €
+        button.tabs-content__btn.btn.btn--secondary Mehr laden
+    #tabpanel-3.tabs-panel.is-hidden(role='tabpanel', tabindex='0', aria-labelledby='tab-3')
+      .tabs-content
+        h2.tabs-content__title Tapas Menü – Tapas Variadas
+        .tabs-content__cards.tabs-cards
+          .tabs-cards__item
+            .tabs-cards__info
+              h3.tabs-cards__title Gemischte mediterrane kalte Tapas Platte für 2 Personen
+              p.tabs-cards__desc Tabla mediterranea de embutidos
+              ul.tabs-cards__list
+                li.tabs-cards__list-item 3 Sorten Käse
+                li.tabs-cards__list-item 1 x Schinken Jamón Serrano
+                li.tabs-cards__list-item 1 x Aioli
+                li.tabs-cards__list-item 1 x Aioli pikant
+                li.tabs-cards__list-item 1 x Schwarze Oliven
+                li.tabs-cards__list-item 1 x Grüne Oliven
+            span.tabs-cards__price p. P. 8,90 €
+          .tabs-cards__item
+            .tabs-cards__info
+              h3.tabs-cards__title Tapas-Auswahl (ab 2 Personen)
+              ul.tabs-cards__list
+                li.tabs-cards__list-item 1 x Selbstqemachte Aioli
+                li.tabs-cards__list-item 1 x Selbstqemachte Aioli pikant
+                li.tabs-cards__list-item 1 x Gemischter Salat mir Artischokenherzen
+                li.tabs-cards__list-item 1 x Pimentos de Padron
+                li.tabs-cards__list-item 1 x Blätterteig mit Weichkäse
+                li.tabs-cards__list-item 1 x Champignons mit Knoblauch und Weißwein (pikant)
+                li.tabs-cards__list-item 1 x Gefüllte Paprika mit Weichkäse
+                li.tabs-cards__list-item 1 x Datteln im Speckmantel
+                li.tabs-cards__list-item 1 x Gambas in Knoublauchöl
+                li.tabs-cards__list-item 1 x Frittierte Sardellen
+                li.tabs-cards__list-item 1 x Gefüllte Paprika mit Seehecht
+                li.tabs-cards__list-item 1 x Kleiner Hähnchenspieß pikant gewürzt
+                li.tabs-cards__list-item 1 x Kleiner Schweinefiletspieb pikant gewürzt
+                li.tabs-cards__list-item 1 x Kartoffelwürfel mit scharfer Tomatensauce und Salsa Bravas
+            span.tabs-cards__price p. P. 8,90 €
+    #tabpanel-4.tabs-panel.is-hidden(role='tabpanel', tabindex='0', aria-labelledby='tab-4')
+      .tabs-content
+        h2.tabs-content__title Salate 2
+        .tabs-content__grid.tabs-grid
+          each val in [1,1,1,1,1,1,1,1,1,1,1,1]
+            .tabs-grid__item
+              h3.tabs-grid__title Gegrillte
+              p.tabs-grid__desc Jamón «Serrano»
+              span.tabs-grid__price 4,90 €
+        button.tabs-content__btn.btn.btn--secondary Mehr laden

@@ -83,3 +83,7 @@ img {
   padding-top: var(--gap-y);
   padding-bottom: var(--gap-y);
 }
+
+[role='tabpanel'].is-hidden {
+  display: none;
+}

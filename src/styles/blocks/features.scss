@@ -1,0 +1,39 @@
+.features {
+  margin-top: 72px;
+
+  &__index {
+    margin-right: 124px;
+    font-size: 24px;
+    color: var(--gold-color);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 60px 10px;
+
+    border-bottom: 1px solid var(--divider-color);
+
+    &:first-child {
+      border-top: 1px solid var(--divider-color);
+    }
+  }
+
+  &__title {
+    max-width: 300px;
+    margin-right: auto;
+
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+  }
+
+  &__desc {
+    max-width: 370px;
+    font-size: 20px;
+    line-height: 140%;
+    opacity: 0.9;
+  }
+}

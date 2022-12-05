@@ -1,0 +1,35 @@
+.cta-catering-wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  height: 0;
+  padding-bottom: calc(470px / 1230px * 100%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.cta-catering {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  &__heading {
+    max-width: 440px;
+    text-align: center;
+  }
+
+  &__btn {
+    margin-top: 40px;
+  }
+}

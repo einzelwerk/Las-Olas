@@ -4,7 +4,7 @@ const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const SVGSpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const StylelintBarePlugin = require('stylelint-bare-webpack-plugin');
 
 const pagesDir = './src/pug/pages';
@@ -52,6 +52,7 @@ module.exports = {
         template: path.resolve(__dirname, pagesDir, file),
         filename: `${path.parse(file).name}.html`,
         minify: false,
+        path: isProd ? '/Las-olas' : '',
       });
     }),
     new ESLintPlugin(),
@@ -61,8 +62,8 @@ module.exports = {
       filename: 'assets/css/[name].css',
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new SpriteLoaderPlugin({
-      plainSprite: true,
+    new SVGSpriteLoaderPlugin({
+      plainSprite: false,
       spriteAttrs: {
         fill: '#fff',
         class: 'svg-icon',
@@ -92,8 +93,8 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-        type: 'asset/inline',
+        test: /\.(woff(2)?|eot|ttf|otf|)$/,
+        type: 'asset/resource',
       },
       {
         test: /\.(scss|css)$/,
@@ -129,6 +130,9 @@ module.exports = {
         use: [
           {
             loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+            },
           },
         ],
       },

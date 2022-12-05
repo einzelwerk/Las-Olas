@@ -1,0 +1,9 @@
+extends ../layouts/main
+
+block content
+  - locals.heroImage = require('@/images/hero-menu.png');
+  - locals.heroTitle = 'Speisekarte';
+  - locals.heroSmall = true;
+  include ../blocks/hero
+  include ../blocks/tabs-menu
+  include ../blocks/cta

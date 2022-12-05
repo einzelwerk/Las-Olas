@@ -1,0 +1,39 @@
+.block-heading {
+  &__text {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gold-color);
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  &__desc {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 140%;
+    opacity: 0.8;
+
+    p {
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 19px 32px;
+  }
+}

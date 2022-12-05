@@ -23,6 +23,7 @@
   --gold-color: #c29442;
   --platinum-color: #e4e4e4;
   --black-color: #141414;
+  --lt-black-color: #262626;
   --white-color: #fff;
   --silver-color: #d0d0d0;
   --divider-color: rgb(255 255 255 / 12%);
@@ -33,5 +34,6 @@
   --primary-text: var(--white-color);
   --secondary-text: var(--silver-color);
   --accent-color: var(--gold-color);
+  --secondary-color: var(--lt-black-color);
   --background-color: var(--black-color);
 }

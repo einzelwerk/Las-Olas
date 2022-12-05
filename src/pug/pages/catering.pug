@@ -1,0 +1,15 @@
+extends ../layouts/main
+
+block content
+  - locals.heroImage = require('@/images/hero-catering.png');
+  - locals.heroTitle = 'Catering';
+  include ../blocks/hero
+  - locals.infoImage = require('@/images/info-block-3.jpg');
+  - locals.infoText = 'Rundum-sorglos-Paket';
+  - locals.infoTitle = 'Sie feiern - Wir kochen für Sie!';
+  - locals.infoDesc = ['Gerne bieten wir Ihnen ein persönliches und auf Ihre Bedürfnisse maßgeschneidertes Angebot an.', 'Unser Catering-Angebot beginnt ab 12€ pro Person und ist individuell anpassbar. Ob Sie mit der Familie speisen wollen oder ein Meeting mit den Geschäftspartnern halten, bei uns finden Sie das richtige Angebot. Für genauere Informationen können Sie uns gerne jederzeit kontaktieren.', 'Wir freuen uns von Ihnen zu hören! Ihr Team vom Las Olas!'];
+  include ../blocks/info-block
+  - locals.sectionTitle = 'Sehen Sie sich die schönen Bilder an, die wir machen';
+  - locals.sectionDesc = 'Neben den frisch zubereiteten Tapas und unserem vielfältigen Weinsortiment, ist unsere nach.';
+  include ../blocks/gallery
+  include ../blocks/cta-catering

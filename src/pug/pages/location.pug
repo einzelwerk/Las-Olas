@@ -1,0 +1,26 @@
+extends ../layouts/main
+
+block content
+  - locals.heroImage = require('@/images/hero-location.png');
+  - locals.heroTitle = 'Location';
+  include ../blocks/hero
+  include ../blocks/features
+  include ../blocks/ceo
+  include ../blocks/cta-hire
+  - locals.infoText = 'Rundum-sorglos-Paket';
+  - locals.infoTitle = 'Willkommensgetränke Catering';
+  - locals.infoDesc = ['Unser Catering-Angebot beginnt ab 12€ pro Person und ist individuell anpassbar. Ob Sie mit der Familie speisen wollen oder ein Meeting mit den Geschäftspartnern halten, bei uns finden Sie das richtige Angebot. Für genauere Informationen können Sie uns gerne jederzeit kontaktieren.'];
+  - locals.infoBtn = true;
+  - locals.infoImage = require('@/images/info-block-1.jpg');
+  include ../blocks/info-block
+  - locals.sectionTitle = 'Sehen Sie sich die schönen Bilder an, die wir machen';
+  - locals.sectionDesc = 'Neben den frisch zubereiteten Tapas und unserem vielfältigen Weinsortiment, ist unsere nach.';
+  include ../blocks/gallery
+  - locals.reversed = true;
+  - locals.infoText = 'Beste Nudeln in HATTINGEN';
+  - locals.infoTitle = 'Partys im Freien miteinem Koch';
+  - locals.infoDesc = ['Bin durch eine Kundenvermittlung auf der Suche nach einer Bank mit kostenloser Kontoführung zur PSD Bank gestoßen und bislang sehr zufrieden. '];
+  - locals.infoBtn = false;
+  - locals.infoImage = require('@/images/info-block-2.jpg');
+  include ../blocks/info-block
+  include ../blocks/cta

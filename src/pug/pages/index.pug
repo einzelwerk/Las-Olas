@@ -1,9 +1,15 @@
 extends ../layouts/main
 
 block content
+  - locals.heroImage = require('@/images/hero-home.png');
+  - locals.heroTitle = 'Las Olas Hattingen';
+  - locals.heroDesc = 'Wir haben zu gewohnten Zeiten geöffnet - Terrasse und Innenbereich.';
+  - locals.heroBtn = true;
   include ../blocks/hero
   include ../blocks/video-section
   include ../blocks/menu
   include ../blocks/details-nav
+  - locals.sectionTitle = 'Masonry Gallery';
+  - locals.sectionDesc = null;
   include ../blocks/gallery
   include ../blocks/cta

@@ -1,0 +1,30 @@
+.tabs-category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__button {
+    margin-right: 16px;
+    padding: 16px 32px;
+
+    color: var(--secondary-text);
+    text-transform: uppercase;
+
+    border-radius: 1000px;
+
+    transition: 0.5s color;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &[aria-selected='true'] {
+      color: var(--primary-text);
+      border-color: var(--primary-text);
+    }
+
+    &:hover {
+      color: var(--primary-text);
+    }
+  }
+}

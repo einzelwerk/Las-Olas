@@ -1,0 +1,16 @@
+section.section.container
+  .info-block(class=reversed ? 'info-block--reversed' : null)
+    .block-heading.info-block__text
+      if infoText
+        span.block-heading__text= infoText
+      if infoTitle
+        h2.block-heading__title= infoTitle
+      if infoDesc
+        .block-heading__desc
+          each val in infoDesc
+            p= val
+      if infoBtn
+        a.block-heading__btn.btn.btn--secondary(href='') Mehr erfahren
+    .info-block__image-wrapper
+      picture.info-block__image
+        img(src=infoImage, alt='')
