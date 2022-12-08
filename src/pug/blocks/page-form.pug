@@ -1,0 +1,37 @@
+section.section.container
+  .page-form
+    h4.page-form__title Tisch reservieren
+    form.page-form__form.main-form(action='?')
+      .main-form__grid
+        .main-form__item
+          input#name.main-form__input(type='text', placeholder=' ')
+          label.main-form__label(for='name') Name*
+        .main-form__item
+          input#phone.main-form__input(type='text', placeholder=' ')
+          label.main-form__label(for='phone') Telefon*
+        .main-form__item
+          input#email.main-form__input(type='text', placeholder=' ')
+          label.main-form__label(for='email') Email*
+        .main-form__item
+          input#date.main-form__input(type='text', placeholder=' ')
+          label.main-form__label(for='date') TT.MM.JJJJ*
+        .main-form__item
+          input#time.main-form__input(type='text', placeholder=' ')
+          label.main-form__label(for='time') Uhrzeit*
+        .main-form__item
+          input#count.main-form__input(type='text', placeholder=' ')
+          label.main-form__label(for='count') Anzahl Gäste*
+        .main-form__item
+          input#message.main-form__input(type='text', placeholder=' ')
+          label.main-form__label(for='message') Nachricht
+      .main-form__checkbox.form-checkbox
+        label.form-checkbox__label(for='checkbox')
+          input#checkbox.form-checkbox__checkbox.hidden(type='checkbox', name='checkbox')
+          span.form-checkbox__fake-checkbox
+        p.form-checkbox__desc
+          label(for='checkbox') Mit der Verarbeitung meiner Daten entsprechend der
+          | !{ ' ' }
+          a(href='') Datenschutzerklärung
+          | !{ ' ' }
+          label(for='checkbox') bin ich mit dem Abschicken meiner Nachricht einverstanden.
+      button.main-form__submit.btn.btn--primary Reservieren

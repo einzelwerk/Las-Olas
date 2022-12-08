@@ -1,1 +1,88 @@
 @use '../utils/mixins' as *;
+
+.footer {
+  margin-top: 160px;
+  border-top: 1px solid var(--divider-color);
+
+  &--no-margin {
+    margin-top: 0;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.4;
+  }
+
+  &__copyright {
+    margin-right: 32px;
+    opacity: 0.4;
+  }
+
+  &__policy {
+    display: flex;
+  }
+
+  &__policy-item {
+    margin-right: 20px;
+  }
+
+  &__socials {
+    margin-left: auto;
+  }
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  justify-content: space-between;
+  padding-top: 44px;
+}
+
+.footer-nav {
+  &__item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.footer-contacts {
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    svg {
+      margin-right: 12px;
+    }
+  }
+}
+
+.footer-work {
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__hours {
+    margin-left: 8px;
+    font-weight: 500;
+    color: var(--accent-color);
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  margin-top: 108px;
+  padding-bottom: 40px;
+  font-size: 14px;
+}

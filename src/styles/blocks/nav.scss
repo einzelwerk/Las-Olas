@@ -5,12 +5,11 @@
 
 .nav {
   &__item {
-    all: unset;
-
     margin-right: 30px;
 
     font-weight: 500;
     color: var(--secondary-text);
+    list-style: none;
 
     transition: color 0.5s;
 
@@ -24,7 +23,6 @@
   }
 
   &__link {
-    all: unset;
     cursor: pointer;
   }
 }

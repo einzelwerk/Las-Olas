@@ -1,4 +1,6 @@
-footer.footer
+include ../modules/vars
+
+footer.footer(class=footerMargin ? 'footer--no-margin' : '')
   .footer-wrapper.container
     .footer-top
       .footer__logo.logo
@@ -8,19 +10,48 @@ footer.footer
         h5.footer__title Main menu
         nav.footer-nav
           ul.footer-nav-list
-            li.footer-nav__item
-              a.footer-nav__link(href='') Home
-            li.footer-nav__item
-              a.footer-nav__link(href='') Location
-            li.footer-nav__item
-              a.footer-nav__link(href='') Speisekarte
-            li.footer-nav__item
-              a.footer-nav__link(href='') Catering
-            li.footer-nav__item
-              a.footer-nav__link(href='') Kontakt
+            each val in menu
+              li.footer-nav__item
+                a.footer-nav__link(href=val.link)= val.name
       .footer__col
         h5.footer__title Kontakt
         .footer-contacts
           .footer-contacts__item
             svg(width='16', height='16')
-              use(xlink:href='sprite.svg#map_sprite')
+              use(xlink:href='sprite.svg#pin_sprite')
+            address.footer-contacts__value Emschestr. 42, 45525 Hattingen
+          .footer-contacts__item
+            svg(width='16', height='16')
+              use(xlink:href='sprite.svg#phone_sprite')
+            a.footer-contacts__value(href='tel:+49023246866670') +49 (0) 2324 686 66 70
+          .footer-contacts__item
+            svg(width='16', height='16')
+              use(xlink:href='sprite.svg#email_sprite')
+            a.footer-contacts__value(href='mailto:info@lasolas.de') info@lasolas.de
+      .footer__col
+        h5.footer__title Öffnungszeiten
+        .footer-work
+          .footer-work__item
+            .footer-work__days Montag – Donnerstag:
+            .footer-work__hours 17:00 - 22:30 Uhr
+          .footer-work__item
+            .footer-work__days Freitag, Samstag:
+            .footer-work__hours 17:00 - 23:00 Uhr
+          .footer-work__item
+            .footer-work__days Sonntag:
+            .footer-work__hours 12:00 - 22:00 Uhr
+      .footer__col
+        button.footer__btn.btn.btn--secondary(data-modal='main-modal') Tisch reservieren
+    .footer-bottom
+      .footer__copyright Las Olas Restaurant © 2021
+      .footer__policy
+        a.footer__policy-item(href='') Impressum
+        a.footer__policy-item(href='') Datenschutz
+        a.footer__policy-item(href='') Cookie settings
+      .footer__socials.socials
+        a.socials__item(href='', aria-label='Go to facebook')
+          img.socials__img(src=require('@/images/socials/fb.svg'), alt='')
+        a.socials__item(href='', aria-label='Go to instagram')
+          img.socials__img(src=require('@/images/socials/ig.svg'), alt='')
+include ../blocks/modal-main
+include ../blocks/modal-catering

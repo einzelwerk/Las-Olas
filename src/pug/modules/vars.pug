@@ -18,6 +18,22 @@
     },
     {
       name:'Kontakt', 
-      link: '/', 
+      link: `${htmlWebpackPlugin.options.path}/contacts.html`, 
+    },
+    {
+      name:'Thanks', 
+      link: `${htmlWebpackPlugin.options.path}/thanks.html`, 
+    },
+    {
+      name:'404', 
+      link: `${htmlWebpackPlugin.options.path}/error-404.html`, 
+    },
+    {
+      name:'Policy', 
+      link: `${htmlWebpackPlugin.options.path}/policy.html`, 
     },
   ]
+
+- locals.headerOffset = true;
+
+- locals.footerMargin = true;

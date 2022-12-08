@@ -16,4 +16,5 @@ Fancybox.bind('[data-fancybox]', {
     // Main container element
     main: null,
   },
+  Thumbs: false,
 });

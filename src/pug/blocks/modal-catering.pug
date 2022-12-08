@@ -1,0 +1,38 @@
+.modal-wrapper(data-modal-el='catering-modal')
+  .modal
+    .page-form.page-form--modal
+      h4.modal__title.page-form__title Tisch reservieren
+      .modal__close
+        svg(width='24', height='24')
+          use(xlink:href='sprite.svg#close_sprite') 
+      form.page-form__form.main-form.main-form--modal(action='?')
+        .main-form__grid.main-form__grid--modal.main-form__grid--catering
+          .main-form__item
+            input#catering-name.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='catering-name') Name*
+          .main-form__item
+            input#catering-phone.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='catering-phone') Telefon*
+          .main-form__item
+            input#catering-email.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='catering-email') Email*
+          .main-form__item
+            input#catering-count.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='catering-count') Anzahl Gäste*
+          .main-form__item
+            input#catering-date.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='catering-date') TT.MM.JJJJ*
+          .main-form__item
+            input#catering-reason.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='catering-reason') Grund für die Beteiligung
+        .main-form__checkbox.form-checkbox
+          label.form-checkbox__label(for='checkbox')
+            input#catering-checkbox.form-checkbox__checkbox.hidden(type='checkbox', name='checkbox')
+            span.form-checkbox__fake-checkbox
+          p.form-checkbox__desc
+            label(for='catering-checkbox') Mit der Verarbeitung meiner Daten entsprechend der
+            | !{ ' ' }
+            a(href='') Datenschutzerklärung
+            | !{ ' ' }
+            label(for='catering-checkbox') bin ich mit dem Abschicken meiner Nachricht einverstanden.
+        button.modal__submit.main-form__submit.btn.btn--primary Reservieren

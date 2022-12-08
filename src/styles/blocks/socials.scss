@@ -1,0 +1,32 @@
+.socials {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+
+    border: 1px solid var(--divider-color);
+    border-radius: 2px;
+
+    &:hover {
+      border-color: var(--white-color);
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__img {
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+  }
+}

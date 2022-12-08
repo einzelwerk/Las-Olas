@@ -1,0 +1,41 @@
+.modal-wrapper(data-modal-el='main-modal')
+  .modal
+    .page-form.page-form--modal
+      h4.modal__title.page-form__title Tisch reservieren
+      .modal__close
+        svg(width='24', height='24')
+          use(xlink:href='sprite.svg#close_sprite') 
+      form.page-form__form.main-form.main-form--modal(action='?')
+        .main-form__grid.main-form__grid--modal
+          .main-form__item
+            input#main-name.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='main-name') Name*
+          .main-form__item
+            input#main-phone.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='main-phone') Telefon*
+          .main-form__item
+            input#main-email.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='main-email') Email*
+          .main-form__item
+            input#main-date.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='main-date') TT.MM.JJJJ*
+          .main-form__item
+            input#main-time.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='main-time') Uhrzeit*
+          .main-form__item
+            input#main-count.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='main-count') Anzahl Gäste*
+          .main-form__item
+            input#main-message.main-form__input(type='text', placeholder=' ')
+            label.main-form__label(for='main-message') Nachricht
+        .main-form__checkbox.form-checkbox
+          label.form-checkbox__label(for='checkbox')
+            input#main-checkbox.form-checkbox__checkbox.hidden(type='checkbox', name='checkbox')
+            span.form-checkbox__fake-checkbox
+          p.form-checkbox__desc
+            label(for='main-checkbox') Mit der Verarbeitung meiner Daten entsprechend der
+            | !{ ' ' }
+            a(href='') Datenschutzerklärung
+            | !{ ' ' }
+            label(for='main-checkbox') bin ich mit dem Abschicken meiner Nachricht einverstanden.
+        button.modal__submit.main-form__submit.btn.btn--primary Reservieren

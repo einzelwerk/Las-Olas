@@ -1,0 +1,14 @@
+section.section.container
+  .map
+    picture.map__image
+      img(src=require('@/images/map.jpg'), alt='')
+    .map__pin
+      svg(width='48', height='48')
+        use(xlink:href='sprite.svg#pin_sprite')
+      .map__pin-content.pin-content
+        h5.pin-content__title Las Olas
+        address.pin-content__address Emschestr. 42, 45525 Hattingen
+        a.pin-content__link(href='tel:+49023246866670') +49 (0) 2324 686 66 70
+    a.map__route(href='') Routeplaner
+      svg(width='20', height='20')
+        use(xlink:href='sprite.svg#route_sprite') 

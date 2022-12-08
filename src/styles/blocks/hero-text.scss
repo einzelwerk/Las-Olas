@@ -1,0 +1,21 @@
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 40px 0;
+
+  text-align: center;
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 72px;
+    font-weight: 500;
+  }
+
+  &__desc {
+    max-width: 634px;
+    font-size: 24px;
+    line-height: 140%;
+  }
+}

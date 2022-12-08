@@ -5,9 +5,12 @@
   gap: var(--gap);
 
   &__item {
+    position: relative;
+
     overflow: hidden;
     grid-column: auto;
     grid-row: auto;
+
     border-radius: 16px;
 
     &:nth-child(3) {
@@ -20,6 +23,13 @@
       grid-row: span 2;
     }
 
+    &:hover {
+      // stylelint-disable
+      .gallery-grid__icon {
+        opacity: 1;
+      }
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -27,8 +37,38 @@
     }
   }
 
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    opacity: 0;
+    background: var(--white-color);
+    border-radius: 50%;
+
+    transition: opacity 0.5s;
+  }
+
   &__image {
     width: 100%;
     height: 100%;
   }
+}
+
+.gallery-more-link-wrapper {
+  text-align: center;
+}
+
+.gallery-more-link {
+  display: inline-block;
+  margin: 60px auto 0;
+  padding: 19px 32px;
 }

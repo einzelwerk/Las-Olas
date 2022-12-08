@@ -17,4 +17,16 @@ header.header
         .working-time__toolbox
           svg.working-time__icon(width='14', height='14')
             use(xlink:href='sprite.svg#info_sprite')
-    button.header__btn.btn.btn--secondary.js-open-modal Tisch reservieren
+          aside.toolbox-content
+            h3.toolbox-content__title Öffnungszeiten
+            .toolbox-content__list
+              .toolbox-content__item
+                .toolbox-content__days Montag – Donnerstag:
+                .toolbox-content__hours 17:00 - 22:30 Uhr
+              .toolbox-content__item
+                .toolbox-content__days Freitag, Samstag:
+                .toolbox-content__hours 17:00 - 23:00 Uhr
+              .toolbox-content__item
+                .toolbox-content__days Sonntag:
+                .toolbox-content__hours 12:00 - 22:00 Uhr
+    button.header__btn.btn.btn--secondary(data-modal='main-modal') Tisch reservieren

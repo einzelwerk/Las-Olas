@@ -1,0 +1,13 @@
+extends ../layouts/main
+block vars
+  - var headerOffset = true;
+  - var footerMargin = true;
+block content
+  section
+    .feedback-page
+      .feedback-page__info
+        h3.feedback-page__heading Welldone!
+        h1.feedback-page__title Danke! Wir haben Ihre Nachricht erhalten.
+        a.feedback-page__btn.btn.btn--secondary(href='/') Back to Startseite
+      picture.feedback-page__image
+        img(src=require('@/images/thanks.jpg'), alt='')

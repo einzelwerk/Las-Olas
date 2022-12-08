@@ -1,0 +1,42 @@
+section.section.section--no-top.container
+  .contacts
+    .contacts__info
+      .contacts__row
+        h2.contacts__title Las Olas
+        p.contacts__desc Für kurzfristige Reservierungen / Stornierungen ausserhalb unserer Öffnungszeiten, bitten wir um telefonische Kontaktaufnahme.
+        .contacts__block.contacts-list
+          .contacts-list__item
+            svg(width='20', height='20')
+              use(xlink:href='sprite.svg#pin_sprite')
+            address.contacts-list__value Emschestr. 42, 45525 Hattingen
+          .contacts-list__item
+            svg(width='20', height='20')
+              use(xlink:href='sprite.svg#phone_sprite')
+            a.contacts-list__value.contacts__link(href='tel:+49023246866670') +49 (0) 2324 686 66 70
+          .contacts-list__item
+            svg(width='20', height='20')
+              use(xlink:href='sprite.svg#email_sprite')
+            a.contacts-list__value.contacts__link(href='tel:info@lasolas.de') info@lasolas.de
+      .contacts__row
+        h2.contacts__title Öffnungszeiten
+        .contacts__block.contacts-working
+          .contacts-working__item
+            .contacts-working__days Montag – Donnerstag
+            .contacts-working__hours 17:00 - 22:30 Uhr
+          .contacts-working__item
+            .contacts-working__days Freitag, Samstag
+            .contacts-working__hours 17:00 - 23:00 Uhr
+          .contacts-working__item
+            .contacts-working__days Sonntag
+            .contacts-working__hours 12:00 - 22:00 Uhr
+      .contacts__row
+        h2.contacts__title Warme Küche
+        .contacts__block.contacts-working
+          .contacts-working__item
+            .contacts-working__days Montag – Samstag
+            .contacts-working__hours bis 22:00 Uhr
+          .contacts-working__item
+            .contacts-working__days Sonntag
+            .contacts-working__hours bis 21:00 Uhr
+    .contacts__image
+      img(src=require('@/images/contact.jpg'), alt='')
