@@ -51,136 +51,140 @@
     <button class="header__btn btn btn--secondary" data-modal="main-modal">Tisch reservieren</button>
   </div>
 </header>
-    <main class="main">
-<section class="hero-section">
-  <div class="hero" style="background-image:url(assets/images/hero-home.png)">
-    <h1 class="hero__title">Las Olas Hattingen</h1>
-    <p class="hero__desc">Wir haben zu gewohnten Zeiten geöffnet - Terrasse und Innenbereich.</p>
-    <button class="btn btn--primary hero__btn" data-modal="main-modal">Tisch reservieren</button>
+    <main class="main main--offset-top">
+<section class="section container">
+  <div class="hero-text">
+    <h1 class="hero-text__title">Kontakt</h1>
+    <p class="hero-text__desc">Wir freuen uns, Euch bei Las Olas begrüßen zu dürfen. Wenn Ihr in der Zwischenzeit Fragen haben, wendet Euch bitte an die unten stehenden Kontaktdaten.</p>
+  </div>
+</section>
+<section class="section section--no-top container">
+  <div class="contacts">
+    <div class="contacts__info">
+      <div class="contacts__row">
+        <h2 class="contacts__title">Las Olas</h2>
+        <p class="contacts__desc">Für kurzfristige Reservierungen / Stornierungen ausserhalb unserer Öffnungszeiten, bitten wir um telefonische Kontaktaufnahme.</p>
+        <div class="contacts__block contacts-list">
+          <div class="contacts-list__item">
+            <svg width="20" height="20">
+              <use xlink:href="sprite.svg#pin_sprite"></use>
+            </svg>
+            <address class="contacts-list__value">Emschestr. 42, 45525 Hattingen</address>
+          </div>
+          <div class="contacts-list__item">
+            <svg width="20" height="20">
+              <use xlink:href="sprite.svg#phone_sprite"></use>
+            </svg><a class="contacts-list__value contacts__link" href="tel:+49023246866670">+49 (0) 2324 686 66 70</a>
+          </div>
+          <div class="contacts-list__item">
+            <svg width="20" height="20">
+              <use xlink:href="sprite.svg#email_sprite"></use>
+            </svg><a class="contacts-list__value contacts__link" href="tel:info@lasolas.de">info@lasolas.de</a>
+          </div>
+        </div>
+      </div>
+      <div class="contacts__row">
+        <h2 class="contacts__title">Öffnungszeiten</h2>
+        <div class="contacts__block contacts-working">
+          <div class="contacts-working__item">
+            <div class="contacts-working__days">Montag – Donnerstag</div>
+            <div class="contacts-working__hours">17:00 - 22:30 Uhr</div>
+          </div>
+          <div class="contacts-working__item">
+            <div class="contacts-working__days">Freitag, Samstag</div>
+            <div class="contacts-working__hours">17:00 - 23:00 Uhr</div>
+          </div>
+          <div class="contacts-working__item">
+            <div class="contacts-working__days">Sonntag</div>
+            <div class="contacts-working__hours">12:00 - 22:00 Uhr</div>
+          </div>
+        </div>
+      </div>
+      <div class="contacts__row">
+        <h2 class="contacts__title">Warme Küche</h2>
+        <div class="contacts__block contacts-working">
+          <div class="contacts-working__item">
+            <div class="contacts-working__days">Montag – Samstag</div>
+            <div class="contacts-working__hours">bis 22:00 Uhr</div>
+          </div>
+          <div class="contacts-working__item">
+            <div class="contacts-working__days">Sonntag</div>
+            <div class="contacts-working__hours">bis 21:00 Uhr</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contacts__image"><img src="assets/images/contact.jpg" alt=""></div>
   </div>
 </section>
 <section class="section container">
-<div class="section-heading">
-  <h2 class="section-heading__title">Video Section</h2>
-  <p class="section-heading__desc">Mit der Anmeldung zum Newsletter erkläre ich mich mit der Verarbeitung meiner personenbezogenen Daten entsprechend der Datenschutzerklärung</p>
-</div>
-  <div class="video js-play-video">
-    <button class="video__play play"><span class="play__text">Zum Imagevideo</span>
-      <svg class="play__icon" width="24" height="24">
-        <use xlink:href="sprite.svg#play_sprite"> </use>
+  <div class="page-form">
+    <h4 class="page-form__title">Tisch reservieren</h4>
+    <form class="page-form__form main-form" action="?">
+      <div class="main-form__grid">
+        <div class="main-form__item">
+          <input class="main-form__input" id="name" type="text" placeholder=" ">
+          <label class="main-form__label" for="name">Name*</label>
+        </div>
+        <div class="main-form__item">
+          <input class="main-form__input" id="phone" type="text" placeholder=" ">
+          <label class="main-form__label" for="phone">Telefon*</label>
+        </div>
+        <div class="main-form__item">
+          <input class="main-form__input" id="email" type="text" placeholder=" ">
+          <label class="main-form__label" for="email">Email*</label>
+        </div>
+        <div class="main-form__item">
+          <input class="main-form__input" id="date" type="text" placeholder=" ">
+          <label class="main-form__label" for="date">TT.MM.JJJJ*</label>
+        </div>
+        <div class="main-form__item">
+          <input class="main-form__input" id="time" type="text" placeholder=" ">
+          <label class="main-form__label" for="time">Uhrzeit*</label>
+        </div>
+        <div class="main-form__item">
+          <input class="main-form__input" id="count" type="text" placeholder=" ">
+          <label class="main-form__label" for="count">Anzahl Gäste*</label>
+        </div>
+        <div class="main-form__item">
+          <input class="main-form__input" id="message" type="text" placeholder=" ">
+          <label class="main-form__label" for="message">Nachricht</label>
+        </div>
+      </div>
+      <div class="main-form__checkbox form-checkbox">
+        <label class="form-checkbox__label" for="checkbox">
+          <input class="form-checkbox__checkbox hidden" id="checkbox" type="checkbox" name="checkbox"><span class="form-checkbox__fake-checkbox"></span>
+        </label>
+        <p class="form-checkbox__desc">
+          <label for="checkbox">Mit der Verarbeitung meiner Daten entsprechend der</label> <a href="">Datenschutzerklärung</a> 
+          <label for="checkbox">bin ich mit dem Abschicken meiner Nachricht einverstanden.</label>
+        </p>
+      </div>
+      <button class="main-form__submit btn btn--primary">Reservieren</button>
+    </form>
+  </div>
+</section>
+<section class="section container">
+  <div class="map">
+    <picture class="map__image"><img src="assets/images/map.jpg" alt=""></picture>
+    <div class="map__pin">
+      <svg width="48" height="48">
+        <use xlink:href="sprite.svg#pin_sprite"></use>
       </svg>
-    </button>
-    <video class="video__src" muted src="assets/media/video.mp4"> </video>
+      <div class="map__pin-content pin-content">
+        <h5 class="pin-content__title">Las Olas</h5>
+        <address class="pin-content__address">Emschestr. 42, 45525 Hattingen</address><a class="pin-content__link" href="tel:+49023246866670">+49 (0) 2324 686 66 70</a>
+      </div>
+    </div><a class="map__route" href="">Routeplaner
+      <svg width="20" height="20">
+        <use xlink:href="sprite.svg#route_sprite"> </use>
+      </svg></a>
   </div>
 </section>
-<section class="section container">
-  <div class="info-block info-block--reversed">
-    <div class="block-heading info-block__text"><span class="block-heading__text">LOCATION</span>
-      <h2 class="block-heading__title">Spanish Restaurant im Hattingen</h2>
-      <div class="block-heading__desc">
-        <p>Mit der Anmeldung zum Newsletter erkläre ich mich mit der Verarbeitung meiner personenbezogenen Daten entsprechend der Datenschutzerklärung. Mit der Anmeldung zum Newsletter erkläre ich mich mit der Verarbeitung meiner personenbezogenen Daten entsprechend der Datenschutzerklärung</p>
-      </div><a class="block-heading__btn btn btn--secondary" href="">Mehr erfahren</a>
-    </div>
-    <div class="info-block__image-wrapper">
-      <picture class="info-block__image"><img src="assets/images/info-block-1.jpg" alt=""></picture>
-    </div>
-  </div>
-</section>
-<section class="section container container--right">
-  <div class="menu-wrapper">
-    <div class="menu-wrapper__menu menu">
-      <div class="block-heading"><span class="block-heading__text">Buon Appetito</span>
-        <h2 class="block-heading__title">Unsere beliebten Gerichte</h2>
-      </div>
-      <ul class="menu-list">
-        <li class="menu-list__item">Pizza mit Vitello Tonnato<span class="menu-list__price">19,90 €</span></li>
-        <li class="menu-list__item">Gnocchi Tartufata<span class="menu-list__price">19,90 €</span></li>
-        <li class="menu-list__item">Kalbsleber Butter und Salbei<span class="menu-list__price">19,90 €</span></li>
-        <li class="menu-list__item">Rinderfilet mit frischem Trüffe<span class="menu-list__price">19,90 €</span></li>
-        <li class="menu-list__item">Rinderfilet mit schwarzem Pfeffersauce<span class="menu-list__price">19,90 €</span></li>
-        <li class="menu-list__item">Rinderfilet mit schwarzem Pfeffersauce<span class="menu-list__price">19,90 €</span></li>
-      </ul><a class="menu__btn btn btn--secondary" href="">Alle Menüs anzeigen</a>
-    </div>
-    <picture class="menu-wrapper__image"><img src="assets/images/menu.jpg" alt=""></picture>
-  </div>
-</section>
-<section class="section container">
-<div class="section-heading">
-  <h2 class="section-heading__title">Lassen Sie Sich Von Unserer Mentalität, Lebensfreude Und Gastfreundschaft Mitreisse</h2>
-  <p class="section-heading__desc">Neben den frisch zubereiteten Tapas und unserem vielfältigen Weinsortiment, ist unsere nach hauseigenem Rezept hergestellte Sangria eine unserer Spezialitäten.</p>
-</div>
-  <div class="details-wrapper swiper">
-    <nav class="details swiper-wrapper"><a class="details__item swiper-slide" href="#" style="background-image:url(assets/images/d1.jpg)">
-        <div class="details__content">
-          <h3 class="details__title">Headline is Screaming</h3>
-          <p class="details__desc">Menu</p>
-        </div></a><a class="details__item swiper-slide" href="#" style="background-image:url(assets/images/d2.jpg)">
-        <div class="details__content">
-          <h3 class="details__title">Headline is Screaming</h3>
-          <p class="details__desc">Menu</p>
-        </div></a><a class="details__item swiper-slide" href="#" style="background-image:url(assets/images/d3.jpg)">
-        <div class="details__content">
-          <h3 class="details__title">Headline is Screaming</h3>
-          <p class="details__desc">Menu</p>
-        </div></a></nav>
-  </div>
-</section>
-<section class="section container">
-<div class="section-heading">
-  <h2 class="section-heading__title">Masonry Gallery</h2>
-</div>
-  <div class="gallery-grid"><a class="gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/1.jpg">
-      <div class="gallery-grid__icon">
-        <svg width="18" height="18">
-          <use xlink:href="sprite.svg#plus_sprite"> </use>
-        </svg>
-      </div>
-      <picture class="gallery-grid__image"><img src="assets/images/gallery/1.jpg" alt=""></picture></a><a class="gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/2.jpg">
-      <div class="gallery-grid__icon">
-        <svg width="18" height="18">
-          <use xlink:href="sprite.svg#plus_sprite"> </use>
-        </svg>
-      </div>
-      <picture class="gallery-grid__image"><img src="assets/images/gallery/2.jpg" alt=""></picture></a><a class="gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/3.jpg">
-      <div class="gallery-grid__icon">
-        <svg width="18" height="18">
-          <use xlink:href="sprite.svg#plus_sprite"> </use>
-        </svg>
-      </div>
-      <picture class="gallery-grid__image"><img src="assets/images/gallery/3.jpg" alt=""></picture></a><a class="gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/4.jpg">
-      <div class="gallery-grid__icon">
-        <svg width="18" height="18">
-          <use xlink:href="sprite.svg#plus_sprite"> </use>
-        </svg>
-      </div>
-      <picture class="gallery-grid__image"><img src="assets/images/gallery/4.jpg" alt=""></picture></a><a class="gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/5.jpg">
-      <div class="gallery-grid__icon">
-        <svg width="18" height="18">
-          <use xlink:href="sprite.svg#plus_sprite"> </use>
-        </svg>
-      </div>
-      <picture class="gallery-grid__image"><img src="assets/images/gallery/5.jpg" alt=""></picture></a><a class="gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/6.jpg">
-      <div class="gallery-grid__icon">
-        <svg width="18" height="18">
-          <use xlink:href="sprite.svg#plus_sprite"> </use>
-        </svg>
-      </div>
-      <picture class="gallery-grid__image"><img src="assets/images/gallery/6.jpg" alt=""></picture></a>
-  </div>
-  <div class="gallery-more-link-wrapper"><a class="gallery-more-link btn btn--secondary" href="">Mehr photos</a></div>
-</section>
-<section class="section container">
-  <div class="cta-wrapper gradient-border">
-    <div class="cta">
-      <div class="cta__info"><span class="cta__text">Tätigen Sie Ihre</span>
-        <h3 class="cta__title">Reservierung Now</h3>
-        <p class="cta__desc">Wir haben zu gewohnten Zeiten geöffnet - Terrasse und Innenbereich.</p>
-        <button class="cta__btn btn btn--primary" data-modal="main-modal">Reservierung</button>
-      </div>
-      <div class="cta__image-wrapper">
-        <picture class="cta__image"><img src="assets/images/cta.png" alt=""></picture>
-      </div>
-    </div>
+<section class="address-section container">
+  <div class="address">
+    <h3 class="address__title">adresse</h3>
+    <address class="address__value">Emschestr. 42, 45525 Hattingen, Germany</address><a class="address__btn btn btn--secondary" href="">In Google Maps öffnen</a>
   </div>
 </section>
     </main>
