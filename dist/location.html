@@ -22,8 +22,8 @@
         <li class="nav__item"><a class="nav__link" href="/Las-Olas/policy.html">Policy</a></li>
       </ul>
     </nav>
-    <div class="header__info"><a class="header__phone" href="tel:9999">+49 (0) 2324 686 66 70</a>
-      <div class="header__working-time working-time"><span class="working-time__text">17:00 – 22:30 Uhr</span>
+    <div class="header__info"><a class="header__phone hidden-mobile" href="tel:9999">+49 (0) 2324 686 66 70</a>
+      <div class="header__working-time working-time hidden-mobile"><span class="working-time__text">17:00 – 22:30 Uhr</span>
         <div class="working-time__toolbox">
           <svg class="working-time__icon" width="14" height="14">
             <use xlink:href="sprite.svg#info_sprite"></use>
@@ -48,9 +48,50 @@
         </div>
       </div>
     </div>
-    <button class="header__btn btn btn--secondary" data-modal="main-modal">Tisch reservieren</button>
+    <button class="header__btn btn btn--secondary hidden-mobile" data-modal="main-modal">Tisch reservieren</button>
+    <div class="header__bar header-bar hidden-desktop"><a class="header-bar__phone header-bar__btn btn btn--secondary" href="tel:999999999">
+        <svg width="20" height="20">
+          <use xlink:href="sprite.svg#phone-m_sprite"></use>
+        </svg></a>
+      <button class="header-bar__btn btn btn--primary" data-modal="main-modal">
+        <svg width="20" height="20">
+          <use xlink:href="sprite.svg#fork_sprite"> </use>
+        </svg>
+      </button>
+      <div class="header-bar__mobile-btn header-bar__btn js-open-nav">
+        <svg width="20" height="20">
+          <use xlink:href="sprite.svg#menu_sprite"> </use>
+        </svg>
+      </div>
+    </div>
   </div>
 </header>
+<div class="mobile-menu-wrapper" id="nav">
+  <div class="mobile-menu">
+    <button class="mobile-menu__close" aria-label="close menu">
+      <svg width="20" height="20">
+        <use xlink:href="sprite.svg#close-m_sprite"> </use>
+      </svg>
+    </button>
+    <div class="mobile-menu__logo logo"><a class="logo__link" href="/"><img class="logo__src" src="assets/images/Logo.svg" alt=""></a></div>
+    <nav class="mobile-menu__nav nav">
+      <ul class="mobile-nav-list">
+        <li class="nav__item"><a class="nav__link" href="/">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="/Las-Olas/location.html">Location</a></li>
+        <li class="nav__item"><a class="nav__link" href="/Las-Olas/menu.html">Speisekarte</a></li>
+        <li class="nav__item"><a class="nav__link" href="/Las-Olas/catering.html">Catering</a></li>
+        <li class="nav__item"><a class="nav__link" href="/Las-Olas/contacts.html">Kontakt</a></li>
+        <li class="nav__item"><a class="nav__link" href="/Las-Olas/thanks.html">Thanks</a></li>
+        <li class="nav__item"><a class="nav__link" href="/Las-Olas/error-404.html">404</a></li>
+        <li class="nav__item"><a class="nav__link" href="/Las-Olas/policy.html">Policy</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__info"><a class="mobile-menu__link" href="tel:999999">+49 (0) 2324 686 66 70</a>
+      <address class="mobile-menu__address">Emschestr. 42, 45525 Hattingen</address>
+      <div class="mobile-menu__btn btn btn--primary" data-modal="main-modal">Tisch reservieren</div>
+    </div>
+  </div>
+</div>
     <main class="main">
 <section class="hero-section">
   <div class="hero" style="background-image:url(assets/images/hero-location.png)">
@@ -127,43 +168,45 @@
   <h2 class="section-heading__title">Sehen Sie sich die schönen Bilder an, die wir machen</h2>
   <p class="section-heading__desc">Neben den frisch zubereiteten Tapas und unserem vielfältigen Weinsortiment, ist unsere nach.</p>
 </div>
-  <div class="gallery-grid"><a class="gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/1.jpg">
-      <div class="gallery-grid__icon">
-        <svg width="18" height="18">
-          <use xlink:href="sprite.svg#plus_sprite"> </use>
-        </svg>
-      </div>
-      <picture class="gallery-grid__image"><img src="assets/images/gallery/1.jpg" alt=""></picture></a><a class="gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/2.jpg">
-      <div class="gallery-grid__icon">
-        <svg width="18" height="18">
-          <use xlink:href="sprite.svg#plus_sprite"> </use>
-        </svg>
-      </div>
-      <picture class="gallery-grid__image"><img src="assets/images/gallery/2.jpg" alt=""></picture></a><a class="gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/3.jpg">
-      <div class="gallery-grid__icon">
-        <svg width="18" height="18">
-          <use xlink:href="sprite.svg#plus_sprite"> </use>
-        </svg>
-      </div>
-      <picture class="gallery-grid__image"><img src="assets/images/gallery/3.jpg" alt=""></picture></a><a class="gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/4.jpg">
-      <div class="gallery-grid__icon">
-        <svg width="18" height="18">
-          <use xlink:href="sprite.svg#plus_sprite"> </use>
-        </svg>
-      </div>
-      <picture class="gallery-grid__image"><img src="assets/images/gallery/4.jpg" alt=""></picture></a><a class="gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/5.jpg">
-      <div class="gallery-grid__icon">
-        <svg width="18" height="18">
-          <use xlink:href="sprite.svg#plus_sprite"> </use>
-        </svg>
-      </div>
-      <picture class="gallery-grid__image"><img src="assets/images/gallery/5.jpg" alt=""></picture></a><a class="gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/6.jpg">
-      <div class="gallery-grid__icon">
-        <svg width="18" height="18">
-          <use xlink:href="sprite.svg#plus_sprite"> </use>
-        </svg>
-      </div>
-      <picture class="gallery-grid__image"><img src="assets/images/gallery/6.jpg" alt=""></picture></a>
+  <div class="gallery-slider swiper">
+    <div class="gallery-grid swiper-wrapper"><a class="swiper-slide gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/1.jpg">
+        <div class="gallery-grid__icon">
+          <svg width="18" height="18">
+            <use xlink:href="sprite.svg#plus_sprite"> </use>
+          </svg>
+        </div>
+        <picture class="gallery-grid__image"><img src="assets/images/gallery/1.jpg" alt=""></picture></a><a class="swiper-slide gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/2.jpg">
+        <div class="gallery-grid__icon">
+          <svg width="18" height="18">
+            <use xlink:href="sprite.svg#plus_sprite"> </use>
+          </svg>
+        </div>
+        <picture class="gallery-grid__image"><img src="assets/images/gallery/2.jpg" alt=""></picture></a><a class="swiper-slide gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/3.jpg">
+        <div class="gallery-grid__icon">
+          <svg width="18" height="18">
+            <use xlink:href="sprite.svg#plus_sprite"> </use>
+          </svg>
+        </div>
+        <picture class="gallery-grid__image"><img src="assets/images/gallery/3.jpg" alt=""></picture></a><a class="swiper-slide gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/4.jpg">
+        <div class="gallery-grid__icon">
+          <svg width="18" height="18">
+            <use xlink:href="sprite.svg#plus_sprite"> </use>
+          </svg>
+        </div>
+        <picture class="gallery-grid__image"><img src="assets/images/gallery/4.jpg" alt=""></picture></a><a class="swiper-slide gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/5.jpg">
+        <div class="gallery-grid__icon">
+          <svg width="18" height="18">
+            <use xlink:href="sprite.svg#plus_sprite"> </use>
+          </svg>
+        </div>
+        <picture class="gallery-grid__image"><img src="assets/images/gallery/5.jpg" alt=""></picture></a><a class="swiper-slide gallery-grid__item" data-fancybox="gallery" href="assets/images/gallery/6.jpg">
+        <div class="gallery-grid__icon">
+          <svg width="18" height="18">
+            <use xlink:href="sprite.svg#plus_sprite"> </use>
+          </svg>
+        </div>
+        <picture class="gallery-grid__image"><img src="assets/images/gallery/6.jpg" alt=""></picture></a>
+    </div>
   </div>
   <div class="gallery-more-link-wrapper"><a class="gallery-more-link btn btn--secondary" href="">Mehr photos</a></div>
 </section>

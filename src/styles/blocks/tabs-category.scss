@@ -1,9 +1,21 @@
+@use '../utils/mixins' as *;
+
 .tabs-category {
+  @include media(lg) {
+    overflow: auto;
+    justify-content: flex-start;
+  }
+
   display: flex;
   align-items: center;
   justify-content: center;
 
   &__button {
+    @include media(lg) {
+      flex: 0 0 auto;
+      padding: 12px 24px;
+    }
+
     margin-right: 16px;
     padding: 16px 32px;
 

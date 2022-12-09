@@ -1,8 +1,18 @@
+@use '../utils/mixins' as *;
+
+.gallery-slider {
+  @include media(lg) {
+    overflow: visible;
+  }
+}
+
 .gallery-grid {
-  display: grid;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--gap);
+  @include media(lg, min-width) {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap);
+  }
 
   &__item {
     position: relative;

@@ -1,3 +1,5 @@
+@use '../utils/mixins' as *;
+
 .pin-content {
   position: absolute;
   bottom: 100%;
@@ -46,6 +48,10 @@
 }
 
 .map {
+  @include media(md) {
+    padding-bottom: calc(400px / 320px * 100%);
+  }
+
   position: relative;
 
   overflow: hidden;

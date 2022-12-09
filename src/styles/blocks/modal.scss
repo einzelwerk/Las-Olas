@@ -1,3 +1,5 @@
+@use '../utils/mixins' as *;
+
 .modal-wrapper {
   position: fixed;
   z-index: 1030;
@@ -24,6 +26,11 @@
 }
 
 .modal {
+  @include media(md) {
+    max-width: calc(100% - var(--gap) * 2);
+    padding: 24px var(--gap);
+  }
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -40,6 +47,10 @@
   border-radius: 24px;
 
   &__title {
+    @include media(md) {
+      font-size: 24px;
+    }
+
     margin-bottom: 32px;
     font-size: 32px;
   }
@@ -50,11 +61,22 @@
   }
 
   &__close {
+    @include media(md) {
+      top: var(--gap);
+      right: var(--gap);
+      width: 40px;
+      height: 40px;
+    }
+
     cursor: pointer;
 
     position: absolute;
     top: 35px;
     right: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     width: 50px;
     height: 50px;

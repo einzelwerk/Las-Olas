@@ -1,9 +1,21 @@
+@use '../utils/mixins' as *;
+
 .feedback-page {
+  @include media(md) {
+    flex-direction: column;
+    padding: var(--gap-y) 0;
+  }
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   &__info {
+    @include media(md) {
+      margin-bottom: 48px;
+      padding: 0 var(--gap);
+    }
+
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -14,9 +26,19 @@
   }
 
   &__image {
+    @include media(md) {
+      overflow: hidden;
+      padding: 0 var(--gap);
+      border-radius: 16px;
+    }
+
     flex: 1;
 
     img {
+      @include media(md) {
+        border-radius: 16px;
+      }
+
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -24,6 +46,10 @@
   }
 
   &__heading {
+    @include media(md) {
+      margin-bottom: 16px;
+    }
+
     margin-bottom: 32px;
 
     font-size: 18px;
@@ -33,6 +59,11 @@
   }
 
   &__title {
+    @include media(md) {
+      margin-bottom: 32px;
+      font-size: 40px;
+    }
+
     margin-bottom: 40px;
     font-size: 64px;
     line-height: 115%;

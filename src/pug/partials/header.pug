@@ -11,8 +11,8 @@ header.header
           li.nav__item
             a.nav__link(href=val.link)= val.name
     .header__info
-      a.header__phone(href='tel:9999') +49 (0) 2324 686 66 70
-      .header__working-time.working-time
+      a.header__phone.hidden-mobile(href='tel:9999') +49 (0) 2324 686 66 70
+      .header__working-time.working-time.hidden-mobile
         span.working-time__text 17:00 – 22:30 Uhr
         .working-time__toolbox
           svg.working-time__icon(width='14', height='14')
@@ -29,4 +29,15 @@ header.header
               .toolbox-content__item
                 .toolbox-content__days Sonntag:
                 .toolbox-content__hours 12:00 - 22:00 Uhr
-    button.header__btn.btn.btn--secondary(data-modal='main-modal') Tisch reservieren
+    button.header__btn.btn.btn--secondary.hidden-mobile(data-modal='main-modal') Tisch reservieren
+    .header__bar.header-bar.hidden-desktop
+      a.header-bar__phone.header-bar__btn.btn.btn--secondary(href='tel:999999999')
+        svg(width='20', height='20')
+          use(xlink:href='sprite.svg#phone-m_sprite')
+      button.header-bar__btn.btn.btn--primary(data-modal='main-modal')
+        svg(width='20', height='20')
+          use(xlink:href='sprite.svg#fork_sprite') 
+      .header-bar__mobile-btn.header-bar__btn.js-open-nav
+        svg(width='20', height='20')
+          use(xlink:href='sprite.svg#menu_sprite') 
+include ../blocks/mobile-menu

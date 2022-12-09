@@ -1,4 +1,11 @@
+@use '../utils/mixins' as *;
+
 .features {
+  @include media(md) {
+    overflow: auto;
+    display: flex;
+  }
+
   margin-top: 72px;
 
   &__index {
@@ -8,6 +15,11 @@
   }
 
   &__item {
+    @include media(md) {
+      flex: 0 0 auto;
+      flex-direction: column;
+    }
+
     display: flex;
     justify-content: space-between;
     padding: 60px 10px;
@@ -19,6 +31,10 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: 24px;
+    }
+
     max-width: 300px;
     margin-right: auto;
 
@@ -28,6 +44,10 @@
   }
 
   &__desc {
+    @include media(md) {
+      max-width: 280px;
+    }
+
     max-width: 370px;
     font-size: 20px;
     line-height: 140%;

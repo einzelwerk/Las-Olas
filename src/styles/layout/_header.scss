@@ -11,6 +11,10 @@
 }
 
 .header {
+  @include media(lg) {
+    border: none;
+  }
+
   position: absolute;
   z-index: 1010;
   top: 0;
@@ -25,6 +29,10 @@
   }
 
   &__nav {
+    @include media(lg) {
+      display: none;
+    }
+
     margin-right: auto;
   }
 
@@ -43,5 +51,27 @@
     font-weight: 600;
     color: var(--primary-text);
     text-decoration: none;
+  }
+}
+
+.header-bar {
+  display: flex;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+
+    margin-right: 8px;
+    padding: 9px 12px;
+
+    border-radius: 12px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__mobile-btn {
+    background: var(--white-color);
   }
 }

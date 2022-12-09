@@ -21,6 +21,10 @@
   }
 
   &__policy {
+    @include media(lg) {
+      margin: 24px 0 40px;
+    }
+
     display: flex;
   }
 
@@ -29,11 +33,29 @@
   }
 
   &__socials {
+    @include media(lg) {
+      margin: 0;
+    }
+
     margin-left: auto;
+  }
+
+  &__btn {
+    @include media(lg) {
+      position: absolute;
+      top: 44px;
+      right: 0;
+    }
   }
 }
 
 .footer-top {
+  @include media(lg) {
+    position: relative;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
   display: grid;
   grid-template-columns: repeat(5, max-content);
   justify-content: space-between;
@@ -81,6 +103,11 @@
 }
 
 .footer-bottom {
+  @include media(lg) {
+    flex-direction: column-reverse;
+    margin-top: 40px;
+  }
+
   display: flex;
   margin-top: 108px;
   padding-bottom: 40px;

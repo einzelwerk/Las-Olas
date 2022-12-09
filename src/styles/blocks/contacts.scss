@@ -1,9 +1,20 @@
+@use '../utils/mixins' as *;
+
 .contacts {
+  @include media(md) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 72px;
 
   &__row {
+    @include media(md) {
+      margin-bottom: 32px;
+    }
+
     margin-bottom: 100px;
 
     &:last-child {
@@ -12,11 +23,19 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: 24px;
+    }
+
     font-size: 32px;
     line-height: 120%;
   }
 
   &__desc {
+    @include media(md) {
+      font-size: 18px;
+    }
+
     margin-top: 24px;
     font-size: 20px;
     line-height: 140%;
@@ -31,6 +50,11 @@
   }
 
   &__image {
+    @include media(md) {
+      order: -1;
+      height: 240px;
+    }
+
     overflow: hidden;
     border-radius: 24px;
 
@@ -43,9 +67,18 @@
 }
 
 .contacts-working {
+  @include media(md) {
+    flex-direction: column;
+  }
+
   display: flex;
 
   &__item {
+    @include media(md) {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+
     display: flex;
     flex-direction: column;
     margin-right: 24px;

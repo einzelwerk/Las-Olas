@@ -1,8 +1,15 @@
+@use '../utils/mixins' as *;
+
 .hero-section {
+  @include media(md) {
+    height: 100%;
+    min-height: auto;
+  }
+
   position: relative;
 
   height: 100vh;
-  min-height: 500px;
+  min-height: 600px;
   max-height: 1080px;
   margin-bottom: 40px;
 
@@ -13,6 +20,12 @@
 }
 
 .hero {
+  @include media(md) {
+    padding: var(--gap);
+    padding-top: calc(var(--header-height) + 74px);
+    padding-bottom: 140px;
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,12 +39,20 @@
   background-size: cover;
 
   &__title {
-    margin: 0;
+    @include media(md) {
+      font-size: 48px;
+      text-align: center;
+    }
+
     font-size: 72px;
     font-weight: 500;
   }
 
   &__desc {
+    @include media(md) {
+      margin: 16px 0 0;
+    }
+
     max-width: 480px;
     margin: 20px 0 0;
 

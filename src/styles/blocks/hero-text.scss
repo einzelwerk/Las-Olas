@@ -1,4 +1,12 @@
+@use '../utils/mixins' as *;
+
 .hero-text {
+  @include media(md) {
+    align-items: flex-start;
+    padding: 0;
+    text-align: left;
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,12 +16,21 @@
   text-align: center;
 
   &__title {
+    @include media(md) {
+      margin-bottom: 32px;
+      font-size: 48px;
+    }
+
     margin-bottom: 40px;
     font-size: 72px;
     font-weight: 500;
   }
 
   &__desc {
+    @include media(md) {
+      font-size: 20px;
+    }
+
     max-width: 634px;
     font-size: 24px;
     line-height: 140%;

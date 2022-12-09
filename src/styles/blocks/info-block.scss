@@ -1,4 +1,11 @@
+@use '../utils/mixins' as *;
+
 .info-block {
+  @include media(md) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 90px;
@@ -27,6 +34,10 @@
   }
 
   &--reversed &__image-wrapper {
+    @include media(md) {
+      order: initial;
+    }
+
     order: -1;
   }
 }

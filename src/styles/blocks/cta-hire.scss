@@ -1,4 +1,10 @@
+@use '../utils/mixins' as *;
+
 .cta-hire-wrapper {
+  @include media(lg) {
+    padding-bottom: calc(400px / 328px * 100%);
+  }
+
   position: relative;
 
   overflow: hidden;
@@ -6,10 +12,17 @@
   height: 0;
   padding-bottom: calc(400px / 1230px * 100%);
 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   border-radius: 24px;
 }
 
 .cta-hire {
+  @include media(lg) {
+    padding: 20px;
+  }
+
   position: absolute;
   top: 0;
   left: 0;
@@ -19,11 +32,21 @@
   padding: 40px;
 
   &__title {
+    @include media(lg) {
+      font-size: 40px;
+    }
+
     font-size: 64px;
     line-height: 115%;
   }
 
   &__info {
+    @include media(lg) {
+      right: auto;
+      bottom: 20px;
+      left: 20px;
+    }
+
     position: absolute;
     right: 10%;
     bottom: 40px;
@@ -33,6 +56,10 @@
   }
 
   &__link {
+    @include media(lg) {
+      font-size: 24px;
+    }
+
     margin-bottom: 12px;
     font-size: 40px;
     font-weight: 500;

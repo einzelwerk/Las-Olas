@@ -6,7 +6,7 @@ import 'swiper/scss';
 const detailsNode = document.querySelector('.details-wrapper');
 if (detailsNode) {
   const detailsSlider = new Swiper(detailsNode, {
-    slidesPerView: 1,
+    slidesPerView: 1.1,
     init: false,
     spaceBetween: parseInt(globalGap, 10),
     breakpoints: {
@@ -19,4 +19,16 @@ if (detailsNode) {
     },
   });
   detailsSlider.init();
+}
+
+const galleryNode = document.querySelector('.gallery-slider');
+if (galleryNode) {
+  const galleryGrid = new Swiper(galleryNode, {
+    slidesPerView: 1.1,
+    init: false,
+    spaceBetween: parseInt(globalGap, 10),
+  });
+  if (window.matchMedia('(max-width: 1025px)').matches) {
+    galleryGrid.init();
+  }
 }

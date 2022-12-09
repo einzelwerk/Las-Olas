@@ -1,10 +1,20 @@
+@use '../utils/mixins' as *;
+
 .policy-heading-section {
+  @include media(md) {
+    padding: var(--gap-y) 0;
+  }
+
   padding: 100px 0;
   border-bottom: 1px solid var(--divider-color);
 }
 
 .policy-heading {
   &__back {
+    @include media(md) {
+      margin-bottom: 32px;
+    }
+
     display: flex;
     align-items: center;
     margin-bottom: 46px;
@@ -16,11 +26,21 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: 48px;
+      word-break: break-all;
+    }
+
     font-size: 64px;
   }
 }
 
 .policy-content-wrapper {
+  @include media(md) {
+    flex-direction: column;
+    padding-top: var(--gap-y);
+  }
+
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -28,11 +48,19 @@
 }
 
 .policy-content {
+  @include media(md) {
+    margin: 0;
+  }
+
   flex: 1;
   margin-right: 58px;
 }
 
 .policy-sidebar-wrapper {
+  @include media(md) {
+    position: static;
+  }
+
   position: sticky;
   top: 1rem;
 

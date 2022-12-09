@@ -30,6 +30,8 @@ body {
 }
 
 .main {
+  overflow-x: hidden;
+
   &--offset-top {
     padding-top: var(--header-height);
   }

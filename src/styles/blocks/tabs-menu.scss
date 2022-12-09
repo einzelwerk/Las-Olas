@@ -1,7 +1,17 @@
+@use '../utils/mixins' as *;
+
 .tabs-content {
+  @include media(md) {
+    margin-top: 40px;
+  }
+
   margin-top: 60px;
 
   &__title {
+    @include media(md) {
+      margin-bottom: 40px;
+    }
+
     margin-bottom: 60px;
     font-size: 40px;
     font-weight: 500;
@@ -9,6 +19,12 @@
   }
 
   &__btn {
+    @include media(md) {
+      width: 100%;
+      margin-top: 24px;
+      text-align: center;
+    }
+
     margin: auto;
     margin-top: 60px;
     padding: 19px 32px;
@@ -16,6 +32,11 @@
 }
 
 .tabs-grid {
+  @include media(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -33,6 +54,10 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: 14px;
+    }
+
     margin-bottom: 8px;
 
     font-size: 20px;
@@ -42,10 +67,18 @@
   }
 
   &__desc {
+    @include media(md) {
+      font-size: 12px;
+    }
+
     text-align: center;
   }
 
   &__price {
+    @include media(md) {
+      font-size: 14px;
+    }
+
     margin-top: auto;
     font-size: 20px;
     line-height: 140%;

@@ -1,4 +1,10 @@
+@use '../utils/mixins' as *;
+
 .cta-catering-wrapper {
+  @include media(lg) {
+    padding-bottom: calc(400px / 328px * 100%);
+  }
+
   position: relative;
 
   overflow: hidden;

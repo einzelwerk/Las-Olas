@@ -1,3 +1,5 @@
+@use '../utils/mixins' as *;
+
 // stylelint-disable
 
 .page-form {
@@ -15,12 +17,19 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--gap);
-
+    @include media(md) {
+      grid-template-columns: 1fr;
+    }
     &--modal {
       grid-template-columns: repeat(2, 1fr);
-
+      @include media(md) {
+        grid-template-columns: 1fr;
+      }
       .main-form__item:last-child {
         grid-column: span 2;
+        @include media(md) {
+          grid-column: auto;
+        }
       }
     }
     &--catering {
@@ -36,6 +45,9 @@
 
     &:last-child {
       grid-column: span 3;
+      @include media(md) {
+        grid-column: auto;
+      }
     }
   }
 
@@ -49,6 +61,9 @@
     opacity: 0.5;
 
     transition: 0.5s;
+    @include media(md) {
+      font-size: 16px;
+    }
   }
 
   &__input {
@@ -60,7 +75,10 @@
     color: var(--white-color);
 
     border-bottom: 1px solid var(--divider-color);
-
+    @include media(md) {
+      padding-bottom: 16px;
+      padding-top: 16px;
+    }
     &:not(:placeholder-shown) {
       ~ .main-form__label {
         transform: translateY(-100%);
@@ -81,6 +99,9 @@
     padding: 19px 48px;
     font-size: 16px;
     font-weight: 600;
+    @include media(md) {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -88,7 +109,9 @@
   cursor: pointer;
   display: flex;
   margin-top: 50px;
-
+  @include media(md) {
+    margin-top: 40px;
+  }
   &__fake-checkbox {
     position: relative;
 
@@ -130,7 +153,9 @@
     max-width: 555px;
     line-height: 150%;
     color: #ababab;
-
+    @include media(md) {
+      font-size: 14px;
+    }
     a {
       color: var(--white-color);
     }

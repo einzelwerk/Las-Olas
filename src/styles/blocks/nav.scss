@@ -1,5 +1,6 @@
+@use '../utils/mixins' as *;
+
 .nav-list {
-  all: unset;
   display: flex;
 }
 

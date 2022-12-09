@@ -1,9 +1,20 @@
+@use '../utils/mixins' as *;
+
 .cta-wrapper {
+  @include media(lg) {
+    margin-top: 120px;
+  }
+
   padding: 1px;
   border-radius: 24px;
 }
 
 .cta {
+  @include media(lg) {
+    flex-direction: column-reverse;
+    padding: 40px 42px;
+  }
+
   position: relative;
 
   display: flex;
@@ -15,10 +26,20 @@
   border-radius: 24px;
 
   &__info {
+    @include media(lg) {
+      margin-top: -5rem;
+    }
+
     max-width: 450px;
   }
 
   &__text {
+    @include media(lg) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     display: block;
 
     margin-bottom: 16px;
@@ -30,22 +51,44 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: 32px;
+      text-align: center;
+    }
+
     margin-bottom: 24px;
     font-size: 40px;
     font-weight: 500;
   }
 
   &__desc {
+    @include media(md) {
+      font-size: 18px;
+      text-align: center;
+    }
+
     font-size: 20px;
     line-height: 140%;
     opacity: 0.8;
   }
 
   &__btn {
+    @include media(md) {
+      margin: auto;
+      margin-top: 40px;
+    }
+
     margin-top: 40px;
   }
 
   &__image-wrapper {
+    @include media(lg) {
+      position: relative;
+      transform: translateY(-50%);
+      width: 100%;
+      padding-bottom: calc(220px / 224px * 100%);
+    }
+
     position: absolute;
     top: 0;
     right: 0;
@@ -55,6 +98,13 @@
   }
 
   &__image {
+    @include media(lg) {
+      top: auto;
+      right: auto;
+      transform: none;
+      padding-bottom: calc(220px / 224px * 100%);
+    }
+
     position: absolute;
     top: 50%;
     right: 80px;

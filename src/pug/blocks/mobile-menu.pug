@@ -1,0 +1,19 @@
+include ../modules/vars
+
+#nav.mobile-menu-wrapper
+  .mobile-menu
+    button.mobile-menu__close(aria-label='close menu')
+      svg(width='20', height='20')
+        use(xlink:href='sprite.svg#close-m_sprite') 
+    .mobile-menu__logo.logo
+      a.logo__link(href='/')
+        img.logo__src(src=require('@/images/Logo.svg'), alt='')
+    nav.mobile-menu__nav.nav
+      ul.mobile-nav-list
+        each val in menu
+          li.nav__item
+            a.nav__link(href=val.link)= val.name
+    .mobile-menu__info
+      a.mobile-menu__link(href='tel:999999') +49 (0) 2324 686 66 70
+      address.mobile-menu__address Emschestr. 42, 45525 Hattingen
+      .mobile-menu__btn.btn.btn--primary(data-modal='main-modal') Tisch reservieren

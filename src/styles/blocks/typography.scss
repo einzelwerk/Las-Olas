@@ -1,12 +1,23 @@
+@use '../utils/mixins' as *;
+
 .editor-content {
   line-height: 150%;
 
   h2 {
+    @include media(md) {
+      font-size: 30px;
+      line-height: 133%;
+    }
+
     margin-bottom: 48px;
     font-size: 36px;
   }
 
   h3 {
+    @include media(md) {
+      line-height: 129%;
+    }
+
     margin-bottom: 32px;
     font-size: 24px;
   }
