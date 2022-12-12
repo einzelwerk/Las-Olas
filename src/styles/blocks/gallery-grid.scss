@@ -23,6 +23,24 @@
 
     border-radius: 16px;
 
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      opacity: 0;
+      background: #000;
+
+      transition: 0.5s;
+    }
+
     &:nth-child(3) {
       grid-column: span 2;
       grid-row: span 2;
@@ -38,12 +56,16 @@
       .gallery-grid__icon {
         opacity: 1;
       }
+      &:before {
+        opacity: 0.4;
+      }
     }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
   }
 

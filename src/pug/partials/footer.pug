@@ -1,5 +1,3 @@
-include ../modules/vars
-
 footer.footer(class=footerMargin ? 'footer--no-margin' : '')
   .footer-wrapper.container
     .footer-top
@@ -23,11 +21,11 @@ footer.footer(class=footerMargin ? 'footer--no-margin' : '')
           .footer-contacts__item
             svg(width='16', height='16')
               use(xlink:href='sprite.svg#phone_sprite')
-            a.footer-contacts__value(href='tel:+49023246866670') +49 (0) 2324 686 66 70
+            a.footer-contacts__value.footer-contacts__link(href='tel:+49023246866670') +49 (0) 2324 686 66 70
           .footer-contacts__item
             svg(width='16', height='16')
               use(xlink:href='sprite.svg#email_sprite')
-            a.footer-contacts__value(href='mailto:info@lasolas.de') info@lasolas.de
+            a.footer-contacts__value.footer-contacts__link(href='mailto:info@lasolas.de') info@lasolas.de
       .footer__col
         h5.footer__title Öffnungszeiten
         .footer-work

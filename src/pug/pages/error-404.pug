@@ -1,7 +1,6 @@
 extends ../layouts/main
 block vars
   - var headerOffset = true;
-  - var footerMargin = true;
 block content
   section
     .feedback-page
@@ -11,3 +10,6 @@ block content
         a.feedback-page__btn.btn.btn--secondary(href='/') Back to Startseite
       picture.feedback-page__image
         img(src=require('@/images/404.jpg'), alt='')
+block footer
+  - locals.footerMargin = true;
+  include ../partials/footer

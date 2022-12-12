@@ -1,6 +1,10 @@
 @use '../utils/mixins' as *;
 
 .footer {
+  @include media(md) {
+    margin-top: 80px;
+  }
+
   margin-top: 160px;
   border-top: 1px solid var(--divider-color);
 
@@ -30,6 +34,10 @@
 
   &__policy-item {
     margin-right: 20px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__socials {
@@ -65,6 +73,12 @@
 .footer-nav {
   &__item {
     margin-bottom: 16px;
+    opacity: 0.8;
+    transition: 0.5s;
+
+    &:hover {
+      opacity: 1;
+    }
 
     &:last-child {
       margin: 0;
@@ -80,6 +94,12 @@
 
     svg {
       margin-right: 12px;
+    }
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

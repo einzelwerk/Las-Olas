@@ -33,10 +33,15 @@
     &[aria-selected='true'] {
       color: var(--primary-text);
       border-color: var(--primary-text);
+
+      &:hover {
+        border-color: var(--primary-text);
+      }
     }
 
     &:hover {
       color: var(--primary-text);
+      border: 1px solid var(--divider-color);
     }
   }
 }

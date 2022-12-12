@@ -6,9 +6,13 @@
   }
 
   position: relative;
+
   overflow: hidden;
+
   height: 0;
   padding-bottom: calc(620px / 1230px * 100%);
+
+  border-radius: 16px;
 
   &::before {
     content: '';

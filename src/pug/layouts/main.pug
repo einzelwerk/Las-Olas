@@ -1,7 +1,6 @@
 include ../modules/vars
 include ../modules/mixins
 block vars
-
 doctype html
 html(lang='de')
   head
@@ -13,5 +12,6 @@ html(lang='de')
     include ../partials/header
     main.main(class=headerOffset ? 'main--offset-top' : '')
       block content
-
-    include ../partials/footer
+    block footer
+      - locals.footerMargin = false;
+      include ../partials/footer

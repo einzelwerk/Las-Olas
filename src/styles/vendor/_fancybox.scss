@@ -1,0 +1,105 @@
+@use '../utils/mixins' as *;
+
+.fancybox {
+  &__content {
+    overflow: hidden;
+    border-radius: 24px;
+  }
+}
+
+.fancybox {
+  &__thumbs {
+    z-index: 1040;
+    bottom: 6rem;
+    width: 100%;
+  }
+
+  &__toolbar {
+    --carousel-button-height: 50px;
+    --carousel-button-width: 50px;
+    --carousel-button-bg: #fff;
+    --carousel-button-color: var(--black-color);
+    --carousel-button-svg-filter: none;
+  }
+
+  &__nav {
+    .carousel {
+      &__button {
+        --arrow-position: 20%;
+        --arrow-size: 60px;
+        @include media(md) {
+          --arrow-position: 32px;
+          --arrow-size: 40px;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: var(--arrow-size);
+        height: var(--arrow-size);
+
+        background: rgb(255 255 255 / 32%);
+
+        &--close {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 50px;
+          height: 50px;
+
+          background: var(--white-color);
+
+          svg {
+            color: var(--black-color);
+            filter: none;
+          }
+        }
+
+        &:hover {
+          background: var(--white-color);
+        }
+
+        &.is-next {
+          right: var(--arrow-position);
+        }
+
+        &.is-prev {
+          left: var(--arrow-position);
+        }
+
+        svg {
+          color: var(--black-color);
+          filter: none;
+        }
+      }
+    }
+  }
+}
+
+.has-thumb {
+  .fancybox {
+    &__thumb {
+      height: 4px;
+      padding: 0;
+
+      opacity: 0.2;
+      background: #fff;
+      background-image: none !important;
+      border-radius: 100px;
+
+      &::after {
+        content: none !important;
+      }
+    }
+  }
+
+  &.is-nav-selected {
+    .fancybox {
+      &__thumb {
+        opacity: 1;
+      }
+    }
+  }
+}

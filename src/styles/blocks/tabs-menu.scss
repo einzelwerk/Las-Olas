@@ -42,6 +42,10 @@
   gap: 30px;
 
   &__item {
+    @include media(md) {
+      padding: 1rem;
+    }
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,11 +91,19 @@
 }
 
 .tabs-cards {
+  @include media(md) {
+    grid-template-columns: 1fr;
+  }
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 
   &__item {
+    @include media(md) {
+      padding: 1rem;
+    }
+
     position: relative;
     padding: 20px 24px;
     background: var(--secondary-color);
@@ -119,6 +131,12 @@
   }
 
   &__price {
+    @include media(md) {
+      position: static;
+      display: block;
+      margin-top: 2rem;
+    }
+
     position: absolute;
     top: 20px;
     right: 24px;
