@@ -1,6 +1,9 @@
 section.section.container
-  .cta-hire-wrapper(style=`background-image:url(${require('@/images/cta-hire.jpg')})`)
+  .cta-hire-wrapper
     .cta-hire
+      picture.cta-hire__image
+        source(media='(max-width:1024px)', srcset=require('@/images/cta-hire-m.jpg'))
+        img(src=require('@/images/cta-hire.jpg'), alt='')
       h2.cta-hire__title We are hiring
       .cta-hire__info
         a.cta-hire__link(href='mailto:hr@las-olas.de') hr@las-olas.de
