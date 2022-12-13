@@ -149,15 +149,20 @@
   <div class="gallery-more-link-wrapper"><a class="gallery-more-link btn btn--secondary" href="">Mehr photos</a></div>
 </section>
 <section class="section container">
-  <div class="cta-catering-wrapper" style="background-image:url(assets/images/cta-catering.png)">
-    <div class="cta-catering">
-      <div class="block-heading cta-catering__heading"><span class="block-heading__text">in wenigen Klicks</span>
-        <h3 class="block-heading__title">Catering anfragen</h3>
-        <div class="block-heading__desc">
-          <p>Wir haben zu gewohnten Zeiten geöffnet - Terrasse und Innenbereich.</p>
+  <div class="cta-catering-wrapper">
+    <div class="cta-catering-border">
+      <div class="cta-catering">
+        <picture class="cta-catering__image">
+          <source media="(max-width:556px)" srcset="assets/images/cta-catering.png"><img src="assets/images/cta-catering.png" alt="">
+        </picture>
+        <div class="block-heading cta-catering__heading"><span class="block-heading__text">in wenigen Klicks</span>
+          <h3 class="block-heading__title">Catering anfragen</h3>
+          <div class="block-heading__desc">
+            <p>Wir haben zu gewohnten Zeiten geöffnet - Terrasse und Innenbereich.</p>
+          </div>
         </div>
+        <button class="cta-catering__btn btn btn--primary" data-modal="catering-modal">Reservierung</button>
       </div>
-      <button class="cta-catering__btn btn btn--primary" data-modal="catering-modal">Reservierung</button>
     </div>
   </div>
 </section>
