@@ -125,7 +125,7 @@
 .footer-bottom {
   @include media(lg) {
     flex-direction: column-reverse;
-    margin-top: 40px;
+    margin-top: 0;
   }
 
   display: flex;

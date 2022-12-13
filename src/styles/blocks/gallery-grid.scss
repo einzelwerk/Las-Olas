@@ -97,6 +97,9 @@
 
 .gallery-more-link-wrapper {
   text-align: center;
+  @include media(md) {
+    display: none;
+  }
 }
 
 .gallery-more-link {

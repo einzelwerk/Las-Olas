@@ -1,5 +1,18 @@
 @use '../utils/mixins' as *;
 
+.cta-catering-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+
+  background: linear-gradient(0deg, #16140f, #16140f),
+    linear-gradient(25.08deg, #d4ad5d 15.25%, rgb(157 118 55 / 0%) 49.31%, rgb(255 255 255 / 0%) 83.38%);
+}
+
 .cta-catering-wrapper {
   @include media(lg) {
     padding-bottom: calc(400px / 328px * 100%);
@@ -12,8 +25,6 @@
   height: 0;
   padding-bottom: calc(470px / 1230px * 100%);
 
-  background-repeat: no-repeat;
-  background-size: cover;
   border-radius: 16px;
 }
 
@@ -29,6 +40,24 @@
 
   width: 100%;
   height: 100%;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
   &__heading {
     max-width: 440px;
