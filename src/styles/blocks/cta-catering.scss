@@ -2,6 +2,7 @@
 
 .cta-catering-border {
   position: absolute;
+  z-index: -2;
   top: 0;
   left: 0;
 
@@ -9,8 +10,7 @@
   height: 100%;
   padding: 1px;
 
-  background: linear-gradient(0deg, #16140f, #16140f),
-    linear-gradient(25.08deg, #d4ad5d 15.25%, rgb(157 118 55 / 0%) 49.31%, rgb(255 255 255 / 0%) 83.38%);
+  background: linear-gradient(25.08deg, #d4ad5d 15.25%, rgb(157 118 55 / 0%) 49.31%, rgb(255 255 255 / 0%) 83.38%);
 }
 
 .cta-catering-wrapper {
@@ -29,7 +29,7 @@
 }
 
 .cta-catering {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
 
@@ -43,13 +43,17 @@
 
   &__image {
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
 
+    overflow: hidden;
     display: block;
 
     width: 100%;
     height: 100%;
+
+    border-radius: 16px;
 
     img {
       display: block;
