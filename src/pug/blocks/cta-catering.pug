@@ -5,9 +5,10 @@ section.section.container
         picture.cta-catering__image
           source(media='(max-width:556px)', srcset=require('@/images/cta-catering.jpg'))
           img(src=require('@/images/cta-catering.jpg'), alt='')
-        .block-heading.cta-catering__heading
-          span.block-heading__text in wenigen Klicks
-          h3.block-heading__title Catering anfragen
-          .block-heading__desc
-            p Wir haben zu gewohnten Zeiten geöffnet - Terrasse und Innenbereich.
-        button.cta-catering__btn.btn.btn--primary(data-modal='catering-modal') Reservierung
+        .cta-catering__info
+          .block-heading.cta-catering__heading
+            span.block-heading__text in wenigen Klicks
+            h3.block-heading__title Catering anfragen
+            .block-heading__desc
+              p Wir haben zu gewohnten Zeiten geöffnet - Terrasse und Innenbereich.
+          button.cta-catering__btn.btn.btn--primary(data-modal='catering-modal') Reservierung

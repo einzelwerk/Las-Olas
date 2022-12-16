@@ -1,7 +1,7 @@
 @use '../utils/mixins' as *;
 
 .ceo {
-  @include media(md) {
+  @include media(lg) {
     flex-direction: column-reverse;
   }
 
