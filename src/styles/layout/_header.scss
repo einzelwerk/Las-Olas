@@ -15,14 +15,20 @@
     border: none;
   }
 
-  position: absolute;
+  position: fixed;
+  z-index: 1010;
   z-index: 1010;
   top: 0;
   left: 0;
 
   width: 100%;
 
+  background: var(--background-color);
   border-bottom: 1px solid var(--divider-color);
+
+  &.is-hidden {
+    display: none;
+  }
 
   &__logo {
     margin-right: 40px;

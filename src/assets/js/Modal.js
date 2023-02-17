@@ -1,3 +1,5 @@
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-alert */
 class Modal {
@@ -9,11 +11,13 @@ class Modal {
   }
 
   open() {
+    disableBodyScroll(document.querySelector(this.modal));
     document.querySelector(this.modal).style.display = 'block';
     this.state = true;
   }
 
   close() {
+    enableBodyScroll(document.querySelector(this.modal));
     document.querySelector(this.modal).style.display = 'none';
     this.state = false;
   }

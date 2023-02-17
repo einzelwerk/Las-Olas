@@ -27,6 +27,12 @@
 
 .modal {
   @include media(md) {
+    top: 0;
+    transform: translateX(-50%);
+
+    overflow: auto;
+
+    width: 100%;
     max-width: calc(100% - var(--gap) * 2);
     padding: 24px var(--gap);
   }
