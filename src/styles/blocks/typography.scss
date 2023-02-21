@@ -1,7 +1,7 @@
 @use '../utils/mixins' as *;
 
 .editor-content {
-  line-height: 150%;
+  line-height: 1.5;
 
   h2 {
     @include media(md) {
