@@ -8,7 +8,7 @@ class Nav {
 
   listener() {
     document.addEventListener('click', (e) => {
-      if ((this.state && !e.target.closest('#nav')) || (this.state && e.target.closest('.mobile-nav-wrapper__close'))) {
+      if ((this.state && !e.target.closest('#nav')) || (this.state && e.target.closest('.mobile-menu__close'))) {
         this.closeNav();
       } else if (!this.state && this.btn.contains(e.target)) {
         this.openNav();
