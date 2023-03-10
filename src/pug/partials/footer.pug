@@ -1,9 +1,15 @@
 footer.footer(class=footerMargin ? 'footer--no-margin' : '')
   .footer-wrapper.container
     .footer-top
-      .footer__logo.logo
-        a.logo__link(href='')
-          img.logo__src(src=require('@/images/Logo.svg'), alt='')
+      .footer__col
+        .footer__logo.logo
+          a.logo__link(href='')
+            img.logo__src(src=require('@/images/Logo.svg'), alt='')
+        .footer__partners.hidden-mobile
+          |
+          h5.footer__partners-title Partner
+          picture.footer__partners-image
+            img(src=require('@/images/p-l.svg'), alt='')
       .footer__col
         h5.footer__title Main menu
         nav.footer-nav
@@ -51,5 +57,10 @@ footer.footer(class=footerMargin ? 'footer--no-margin' : '')
           img.socials__img(src=require('@/images/socials/fb.svg'), alt='')
         a.socials__item(href='', aria-label='Go to instagram')
           img.socials__img(src=require('@/images/socials/ig.svg'), alt='')
+      .footer__partners.hidden-desktop
+        |
+        h5.footer__partners-title Partner
+        picture.footer__partners-image
+          img(src=require('@/images/p-l.svg'), alt='')
 include ../blocks/modal-main
 include ../blocks/modal-catering
