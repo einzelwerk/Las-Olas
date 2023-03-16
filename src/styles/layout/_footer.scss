@@ -76,8 +76,12 @@
   }
 
   &__partners-image {
-    width: 45px;
-    height: 48px;
+    @include media(md) {
+      margin-left: 0;
+    }
+
+    width: 66px;
+    margin-left: auto;
 
     img {
       width: 100%;
