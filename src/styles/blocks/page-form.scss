@@ -12,7 +12,12 @@
 
 .main-form {
   --gap: 30px;
-
+  @include media(xxl) {
+    --gap: 22px;
+  }
+  @include media(md) {
+    --gap: 32px;
+  }
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
