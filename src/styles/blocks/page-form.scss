@@ -79,6 +79,7 @@
     border-bottom: 1px solid var(--divider-color);
     &--validate-err {
       border-color: red;
+      color: red;
     }
     @include media(md) {
       padding-bottom: 16px;
@@ -131,6 +132,10 @@
 
     border: 1px solid var(--divider-color);
     border-radius: 50%;
+    &--validate-err {
+      border-color: red;
+      color: red;
+    }
   }
 
   &__checkbox:focus ~ &__fake-checkbox {
